@@ -59,14 +59,17 @@ function btnFlash(tn){
 }
 
 function btnPress(){
-    let btn = this;
-    btnFlash(btn);
-
-    userCol = btn.getAttribute("id");
-    userSeq.push(userCol);
-    console.log(userSeq);
-
-    checkAns(userSeq.length-1);
+    if(start) {
+        let btn = this;
+        btnFlash(btn);
+    
+        userCol = btn.getAttribute("id");
+        userSeq.push(userCol);
+        console.log(userSeq);
+    
+        checkAns(userSeq.length-1);
+    }
+    
 }
 
 for(btn of allbtn){
